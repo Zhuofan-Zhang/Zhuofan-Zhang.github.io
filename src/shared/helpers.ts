@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import Resume from "@/assets/Zhuofan_Zhang_Resume.pdf"
 
 const useMediaQuery = (query: string) => {
   const [matches, setMatches] = useState(false);
@@ -15,5 +16,12 @@ const useMediaQuery = (query: string) => {
 
   return matches;
 };
+
+export function downloadPDF() {
+    const link = document.createElement('a');
+    link.href = Resume;
+    link.download = Resume;
+    link.click();
+}
 
 export default useMediaQuery;
