@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import {Timeline} from 'antd';
 import {SelectedPage} from '@/shared/types';
 import {motion} from 'framer-motion';
-import { educationExperience, workExperience } from './Experience';
+import { educationExperience, workExperience } from '@/scenes/experiences/Experience';
 
 type Props = {
     setSelectedPage: (value: SelectedPage) => void;
