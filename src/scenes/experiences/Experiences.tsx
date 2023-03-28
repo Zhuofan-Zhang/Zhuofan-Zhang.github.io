@@ -12,7 +12,7 @@ type Props = {
 const Experiences: React.FC<Props> = ({setSelectedPage}: Props) => {
 
     return (
-        <section id="experiences" className="w-full bg-primary-100">
+        <section id="experiences" className="w-5/6 bg-primary-100 pt-10">
             <motion.div onViewportEnter={() => setSelectedPage(SelectedPage.Experiences)}>
                 <motion.div className="columns-2 mx-auto text-2xl w-5/6 gap-5 items-center justify-center md:flex md:h-full pb-10"
                             style={{fontSize:'30px'}}
