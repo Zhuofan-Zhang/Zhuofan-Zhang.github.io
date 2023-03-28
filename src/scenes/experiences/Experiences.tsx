@@ -2,35 +2,13 @@ import React, {useState} from 'react';
 import {Timeline} from 'antd';
 import {SelectedPage} from '@/shared/types';
 import {motion} from 'framer-motion';
-
-interface Event {
-    title: string;
-    date: string;
-    description: string;
-}
+import { educationExperience, workExperience } from './Experience';
 
 type Props = {
     setSelectedPage: (value: SelectedPage) => void;
 };
 
 const Experiences: React.FC<Props> = ({setSelectedPage}: Props) => {
-    const events = [
-        {
-            title: 'First Event',
-            date: '2022-01-01',
-            description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-        },
-        {
-            title: 'Second Event',
-            date: '2022-02-01',
-            description: 'Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-        },
-        {
-            title: 'Third Event',
-            date: '2022-03-01',
-            description: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-        },
-    ];
 
     return (
         <section id="experiences" className="w-full bg-primary-100 py-60">
@@ -57,20 +35,20 @@ const Experiences: React.FC<Props> = ({setSelectedPage}: Props) => {
                                 visible: {opacity: 1, x: 0},
                             }}>
                     <Timeline className="text-white flex-col mx-auto w-5/6">
-                        {events.map((event, index) => (
+                        {educationExperience.map((event, index) => (
                             <Timeline.Item key={event.date}>
                                 <h3>{event.title}</h3>
                                 <p>{event.date}</p>
-                                <p>{event.description}</p>
+                                <ul>{event.description.map(des => <li>· {des}</li>)}</ul>
                             </Timeline.Item>
                         ))}
                     </Timeline>
                     <Timeline className="text-white flex-col mx-auto w-5/6">
-                        {events.map((event, index) => (
+                        {workExperience.map((event, index) => (
                             <Timeline.Item key={event.date}>
                                 <h3>{event.title}</h3>
                                 <p>{event.date}</p>
-                                <p>{event.description}</p>
+                                <ul>{event.description.map(des => <li>· {des}</li>)}</ul>
                             </Timeline.Item>
                         ))}
                     </Timeline>
