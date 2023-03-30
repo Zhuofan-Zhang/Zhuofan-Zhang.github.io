@@ -1,12 +1,14 @@
 import { useForm } from "react-hook-form";
 import { SelectedPage } from "@/shared/types";
 import { motion } from "framer-motion";
-import ContactUsPageGraphic from "@/assets/ContactUsPageGraphic.png";
 import HText from "@/shared/HText";
+import emailjs, { init } from "emailjs-com";
+import { sendEmail } from "../../shared/sendEmail";
 
 type Props = {
   setSelectedPage: (value: SelectedPage) => void;
 };
+init("9YY3Z3pYCONzBw6UO");
 
 const ContactUs = ({ setSelectedPage }: Props) => {
   const inputStyles = `mb-5 w-full rounded-lg bg-yellow-100
@@ -19,14 +21,12 @@ const ContactUs = ({ setSelectedPage }: Props) => {
   } = useForm();
 
   const onSubmit = async (e: any) => {
-    const isValid = await trigger();
-    if (!isValid) {
       e.preventDefault();
-    }
+      sendEmail();
   };
 
   return (
-    <section id="contacts" className="mx-auto w-5/6 pt-24 pb-32 bg-primary-100">
+    <section id="contacts" className="mx-auto w-5/6 bg-primary-100 pt-24 pb-32">
       <motion.div
         onViewportEnter={() => setSelectedPage(SelectedPage.Contacts)}
       >
@@ -35,14 +35,16 @@ const ContactUs = ({ setSelectedPage }: Props) => {
           className="md:w-3/5"
           initial="hidden"
           whileInView="visible"
-          viewport={{ once:true ,amount: 0.5 }}
+          viewport={{ once: true, amount: 0.5 }}
           transition={{ duration: 0.5 }}
           variants={{
             hidden: { opacity: 0, x: -50 },
             visible: { opacity: 1, x: 0 },
           }}
         >
-          <HText><span className="text-primary-500">Contact me</span></HText>
+          <HText>
+            <span className="text-primary-500">Contact me</span>
+          </HText>
           <p className="my-5 text-2xl">
             if you are hiring or needing help to build your software.
           </p>
@@ -54,19 +56,14 @@ const ContactUs = ({ setSelectedPage }: Props) => {
             className="mt-10 basis-3/5 md:mt-0"
             initial="hidden"
             whileInView="visible"
-            viewport={{ once:true ,amount: 0.5 }}
+            viewport={{ once: true, amount: 0.5 }}
             transition={{ duration: 0.5 }}
             variants={{
               hidden: { opacity: 0, y: 50 },
               visible: { opacity: 1, y: 0 },
             }}
           >
-            <form
-              target="_blank"
-              onSubmit={onSubmit}
-              action="https://formsubmit.co/e8a5bdfa807605332f809e5656e27c6e"
-              method="POST"
-            >
+            <form id='contact-form' onSubmit={onSubmit}>
               <input
                 className={inputStyles}
                 type="text"
