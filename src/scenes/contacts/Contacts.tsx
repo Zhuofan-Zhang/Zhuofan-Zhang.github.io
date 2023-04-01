@@ -18,6 +18,7 @@ const ContactUs = ({setSelectedPage}: Props) => {
         register,
         trigger,
         formState: {errors},
+        reset
     } = useForm();
 
     const onSubmit = async (e: any) => {
@@ -26,6 +27,7 @@ const ContactUs = ({setSelectedPage}: Props) => {
         if (isValid) {
             console.log(isValid);
             openNotification();
+            reset();
             sendEmail();
         }
     };

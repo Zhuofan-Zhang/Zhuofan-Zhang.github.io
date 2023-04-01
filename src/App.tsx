@@ -5,8 +5,9 @@ import ContactUs from "@/scenes/contacts/Contacts";
 import Footer from "@/scenes/footer/Footer";
 import React, {useEffect, useState} from "react";
 import {SelectedPage} from "@/shared/types";
-import Experiences from "./scenes/experiences/Experiences";
 import Blogs from "./scenes/blogs/Blogs";
+import Experiences from "./scenes/experiences/Experiences";
+import ExperiencesTimeline from "./scenes/experiences/ExperiencesTimeline";
 
 function App() {
     const [selectedPage, setSelectedPage] = useState<SelectedPage>(

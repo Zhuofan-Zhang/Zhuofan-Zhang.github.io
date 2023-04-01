@@ -10,7 +10,11 @@
     "deploy": "vite build && gh-pages -d dist"
   },
   "dependencies": {
+    "@emotion/react": "^11.10.6",
+    "@emotion/styled": "^11.10.6",
     "@heroicons/react": "^2.0.13",
+    "@mui/lab": "^5.0.0-alpha.124",
+    "@mui/material": "^5.11.15",
     "antd": "^5.3.2",
     "emailjs-com": "^3.2.0",
     "framer-motion": "^7.6.19",
