@@ -3,7 +3,7 @@ import { SelectedPage } from "@/shared/types";
 import Selfie from "@/assets/Selfie.png";
 import Resume from "@/assets/Zhuofan_Zhang_Resume.pdf"
 import AnchorLink from "react-anchor-link-smooth-scroll";
-import { motion,useScroll } from "framer-motion";
+import { motion } from "framer-motion";
 
 type Props = {
   setSelectedPage: (value: SelectedPage) => void;

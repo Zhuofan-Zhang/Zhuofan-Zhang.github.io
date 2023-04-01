@@ -7,7 +7,7 @@ import React, {useEffect, useState} from "react";
 import {SelectedPage} from "@/shared/types";
 import Blogs from "./scenes/blogs/Blogs";
 import Experiences from "./scenes/experiences/Experiences";
-import ExperiencesTimeline from "./scenes/experiences/ExperiencesTimeline";
+import {preloadImages} from "./shared/helpers";
 
 function App() {
     const [selectedPage, setSelectedPage] = useState<SelectedPage>(
@@ -25,6 +25,14 @@ function App() {
         };
         window.addEventListener("scroll", handleScroll);
         return () => window.removeEventListener("scroll", handleScroll);
+    }, []);
+    useEffect(() => {
+        const imagesToPreload = [
+            '@/assets/Selfie.png',
+            "@/assets/NameLogo.png", "@/assets/github-mark-white.png", '@/assets/NameLogo.png'
+        ];
+
+        preloadImages(imagesToPreload);
     }, []);
 
     return (
