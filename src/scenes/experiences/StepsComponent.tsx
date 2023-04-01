@@ -18,21 +18,21 @@ interface StepsComponentProps {
 
 const StepsComponent: React.FC<StepsComponentProps> = ({educations, work}) => {
     return (
-        <div style={{overflowX: "scroll"}}>
+        <div>
             <div
                 className="mx-auto text-2xl w-5/6 gap-5 items-center justify-center md:flex md:h-full pb-10">Education
             </div>
             <Steps progressDot current={educations.length} direction="horizontal" responsive={false} size="small"
-                   className="whitespace-nowrap md:flex md:h-full w-full">
+                   className="whitespace-nowrap md:flex md:h-full w-full" style={{overflowX: "scroll"}}>
                 {educations.map((step, index) => (
-                    <Step key={index} title={step.title} description={step.description}/>
+                    <Step className="step-content" key={index} title={step.title} description={step.description}/>
                 ))}
             </Steps>
             <div className="mx-auto text-2xl w-5/6 gap-5 items-center justify-center md:flex md:h-full pb-10">Work</div>
             <Steps progressDot current={work.length} direction="horizontal" responsive={false} size="small"
-                   className="whitespace-nowrap md:flex md:h-full w-full">
+                   className="whitespace-nowrap md:flex md:h-full w-full" style={{overflowX: "scroll"}}>
                 {work.map((step, index) => (
-                    <Step key={index} title={step.title} description={step.description}/>
+                    <Step className="step-content" key={index} title={step.title} description={step.description}/>
                 ))}
             </Steps>
         </div>

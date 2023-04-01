@@ -1,11 +1,4 @@
-/* StepsComponent.css */
-:where(.css-mxhywb).ant-steps .ant-steps-item-finish>.ant-steps-item-container>.ant-steps-item-content>.ant-steps-item-title
-:where(.css-dev-only-do-not-override-mxhywb).ant-steps .ant-steps-item-finish > .ant-steps-item-container > .ant-steps-item-content > .ant-steps-item-title {
-    width: 10px;
+.ant-steps .ant-steps-item-finish>.ant-steps-item-container>.ant-steps-item-content>.ant-steps-item-title {
     white-space: initial;
-}
-:where(.css-mxhywb).ant-steps .ant-steps-item-finish>.ant-steps-item-container>.ant-steps-item-content>.ant-steps-item-title
-:where(.css-dev-only-do-not-override-mxhywb).ant-steps .ant-steps-item-finish > .ant-steps-item-container > .ant-steps-item-content > .ant-steps-item-title,
-:where(.css-dev-only-do-not-override-mxhywb).ant-steps .ant-steps-item-finish > .ant-steps-item-container > .ant-steps-item-content > .ant-steps-item-description {
     color: white;
 }
