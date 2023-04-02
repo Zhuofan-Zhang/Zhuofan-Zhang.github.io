@@ -36,7 +36,7 @@ export const educationExperience: Experience[] = [
         title: 'University of California, Los Angeles',
         date: 'Aug - Sep 2017',
         description: [
-            '• Introduction to Statistics(100A)' +
+            '• Introduction to Statistics(100A)',
             '• Introduction to Mathematical Statistics(100B)'
         ]
     },

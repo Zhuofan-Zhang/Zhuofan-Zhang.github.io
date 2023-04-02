@@ -27,7 +27,7 @@ type Props = {
 
 const Certifications = ({setSelectedPage}: Props) => {
     return (
-        <section id="certifications" className="w-full bg-primary-100 py-60">
+        <section id="certifications" className="w-full bg-primary-100 py-40">
             <motion.div
                 onViewportEnter={() => setSelectedPage(SelectedPage.Certifications)}
             >
@@ -47,7 +47,7 @@ const Certifications = ({setSelectedPage}: Props) => {
                     </div>
                 </motion.div>
                 <div className="mt-10 h-[353px] w-full overflow-x-auto overflow-y-hidden">
-                    <ul className="w-[2800px] whitespace-nowrap">
+                    <ul className="whitespace-nowrap">
                         {classes.map((item: ClassType, index) => (
                             <Class
                                 key={`${item.name}-${index}`}
