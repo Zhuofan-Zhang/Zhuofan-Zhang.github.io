@@ -21,15 +21,20 @@ const MenuItems = ({className, selectedPage, setSelectedPage}: Props) => {
                 setSelectedPage={setSelectedPage}
             />
             <Link
-                page="Portfolios"
+                page="Certifications"
                 selectedPage={selectedPage}
                 setSelectedPage={setSelectedPage}
             />
-            <Link
-                page="Blogs"
-                selectedPage={selectedPage}
-                setSelectedPage={setSelectedPage}
-            />
+            {/*<Link*/}
+            {/*    page="Portfolios"*/}
+            {/*    selectedPage={selectedPage}*/}
+            {/*    setSelectedPage={setSelectedPage}*/}
+            {/*/>*/}
+            {/*<Link*/}
+            {/*    page="Blogs"*/}
+            {/*    selectedPage={selectedPage}*/}
+            {/*    setSelectedPage={setSelectedPage}*/}
+            {/*/>*/}
             <Link
                 page="Contacts"
                 selectedPage={selectedPage}

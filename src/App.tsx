@@ -8,6 +8,7 @@ import {SelectedPage} from "@/shared/types";
 import Blogs from "./scenes/blogs/Blogs";
 import Experiences from "./scenes/experiences/Experiences";
 import {preloadImages} from "./shared/helpers";
+import Certifications from "./scenes/certifications/Certifications";
 
 function App() {
     const [selectedPage, setSelectedPage] = useState<SelectedPage>(
@@ -44,8 +45,9 @@ function App() {
             />
             <Home setSelectedPage={setSelectedPage}/>
             <Experiences setSelectedPage={setSelectedPage}/>
-            <Portfolios setSelectedPage={setSelectedPage}/>
-            <Blogs setSelectedPage={setSelectedPage}/>
+            <Certifications setSelectedPage={setSelectedPage}/>
+            {/*<Portfolios setSelectedPage={setSelectedPage}/>*/}
+            {/*<Blogs setSelectedPage={setSelectedPage}/>*/}
             <ContactUs setSelectedPage={setSelectedPage}/>
             <Footer/>
         </div>

@@ -13,7 +13,7 @@ const Experiences: React.FC<Props> = ({setSelectedPage}: Props) => {
     const isAboveMediumScreens = useMediaQuery("(min-width: 1060px)");
 
     return (
-        <section id="experiences" className=" md:h-full py-40">
+        <section id="experiences" className=" md:h-full py-40" style={{marginBottom:"300px"}}>
             <motion.div onViewportEnter={() => setSelectedPage(SelectedPage.Experiences)}>
                 {isAboveMediumScreens ?
                     (

@@ -39,8 +39,9 @@ const ExperiencesTimeline: React.FC<Props> = ({setSelectedPage}: Props) => {
                         {educationExperience.map((event, index) => (
                             <Timeline.Item key={event.date} className="text-lg">
                                 <h3 className="text-lg">{event.title}</h3>
-                                <p>{event.date}</p>
-                                <ul>{event.description?.map(des => <li>· {des}</li>)}</ul>
+                                <p className="text-base">{event.date}</p>
+                                <p className="text-base pb-5"> {event.position}</p>
+                                <ul>{event.description?.map(des => <li style={{paddingBottom:"5px"}}>{des}</li>)}</ul>
                             </Timeline.Item>
                         ))}
                     </Timeline>
@@ -49,7 +50,8 @@ const ExperiencesTimeline: React.FC<Props> = ({setSelectedPage}: Props) => {
                             <Timeline.Item key={event.date}>
                                 <h3 className="text-lg">{event.title}</h3>
                                 <p className="text-base"> {event.date}</p>
-                                <ul>{event.description?.map(des => <li>· {des}</li>)}</ul>
+                                <p className="text-base pb-5"> {event.position}</p>
+                                <ul>{event.description?.map(des => <li style={{paddingBottom:"5px"}}>{des}</li>)}</ul>
                             </Timeline.Item>
                         ))}
                     </Timeline>
