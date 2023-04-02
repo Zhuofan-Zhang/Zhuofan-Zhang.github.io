@@ -1,4 +1,12 @@
-.ant-steps .ant-steps-item-finish>.ant-steps-item-container>.ant-steps-item-content>.ant-steps-item-title {
+.ant-steps .ant-steps-item-finish > .ant-steps-item-container > .ant-steps-item-content > .ant-steps-item-title,
+.ant-steps.ant-steps-label-vertical .ant-steps-item-subtitle,
+.ant-steps .ant-steps-item-finish > .ant-steps-item-container > .ant-steps-item-content > .ant-steps-item-description {
     white-space: initial;
     color: white;
+    text-align: left;
+}
+.ant-steps.ant-steps-dot.ant-steps-small .ant-steps-item-content {
+    text-align: left;
+    width: 250px;
+    padding-left: 70px;
 }
