@@ -1,5 +1,5 @@
 import {ClassType, SelectedPage} from "@/shared/types";
-import tableau from "@/assets/certificationimages/TableauCertifications.jpg";
+import tableau from "@/assets/certificationImages/TableauCertifications.jpg";
 import awsDeveloper from "@/assets/certificationimages/AWS Certified Developer - Associate certificate.jpg";
 import awsSap from "@/assets/certificationImages/AWS_SAP_certificate.jpg";
 import {motion} from "framer-motion";
