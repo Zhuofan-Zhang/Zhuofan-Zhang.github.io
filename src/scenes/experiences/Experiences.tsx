@@ -12,8 +12,11 @@ type Props = {
 const Experiences: React.FC<Props> = ({setSelectedPage}: Props) => {
     const isAboveMediumScreens = useMediaQuery("(min-width: 1060px)");
 
+    const desktopStyle = "md:h-full py-40 mb-[300px]"
+    const mobileStyle = "md:h-full py-40"
+    const usedStyle = isAboveMediumScreens ? desktopStyle : mobileStyle
     return (
-        <section id="experiences" className=" md:h-full py-40" style={{marginBottom:"300px"}}>
+        <section id="experiences" className={usedStyle}>
             <motion.div onViewportEnter={() => setSelectedPage(SelectedPage.Experiences)}>
                 {isAboveMediumScreens ?
                     (
