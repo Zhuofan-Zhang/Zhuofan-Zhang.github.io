@@ -27,8 +27,8 @@ const ContactUs = ({setSelectedPage}: Props) => {
         if (isValid) {
             console.log(isValid);
             openNotification();
-            reset();
             sendEmail();
+            reset();
         }
     };
 
