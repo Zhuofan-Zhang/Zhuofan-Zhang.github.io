@@ -99,11 +99,11 @@ export const workSteps: StepData[] = [
     {
         title: 'Thoughtworks',
         position: 'Software Developer',
-        description: 'Aug 2019 - Dec 2020',
+        description: 'July 2021 - Now',
     },
     {
         title: 'Tencent',
         position: 'Data Analysis Intern',
-        description: 'Aug - Sep 2017',
+        description: 'Nov 2020 - Jan 2021',
     }
 ];

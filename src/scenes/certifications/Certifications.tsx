@@ -1,5 +1,6 @@
 import {ClassType, SelectedPage} from "@/shared/types";
 import tableau from "@/assets/certificationImages/TableauCertifications.jpg";
+import cca from "@/assets/certificationImages/Zhuofan_Zhang_CCA.jpg";
 import awsDeveloper from "@/assets/certificationImages/AWS Certified Developer - Associate certificate.jpg";
 import awsSap from "@/assets/certificationImages/AWS_SAP_certificate.jpg";
 import {motion} from "framer-motion";
@@ -18,7 +19,11 @@ const classes: Array<ClassType> = [
     {
         name: "Tableau Desktop Certified Associate",
         image: tableau,
-    }
+    },
+    {
+        name: "CCA Spark and Hadoop Developer",
+        image: cca,
+    },
 ];
 
 type Props = {
